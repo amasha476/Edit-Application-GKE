@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="src/form.css"/>
+  <style>
+    body {
+      background-image: url('src/image.jpeg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+</head>
+<body>
+  <div id="container">
+    <center><img src="src/Capture.PNG" alt="Logo" height=130 width=130>
+    <h1 id="title"> OpenAI Edit Application</h1></center>
+    <form>
+      <center><input type="text" class="input" id="msg-input" value="Enter your Comment here"/></center>
+      <center><button id="msg-send">Click here to proceed</button></center>
+    </form>
+    <div id="msg-response" style="text-align:justify; text-justify:inter-word;"><font size="5px">
+      </font><b>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      This is editted version of your response</b></font></div>
+  </div>
+  <script src="scripts/index.js"></script>
+</body>
+</html>

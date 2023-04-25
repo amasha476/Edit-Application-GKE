@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cc-deployment-edit
+  labels:
+    app: devapp-edit
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devapp-edit
+  template:
+    metadata:
+      labels:
+        app: devapp-edit
+    spec:
+      containers:
+      - name: nodeserver
+        image: amasha97/devapp-edit:latest
+        ports:
+        - containerPort: 8081
