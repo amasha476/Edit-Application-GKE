@@ -14,23 +14,23 @@ const configuration = new Configuration({
 });
 const openai = new OpenAIApi(configuration);
 
-const mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => {
-        console.log('MongoDB Connected');
-        console.log(typeof process.env.MONGO_URI);
-    })
-    .catch(err => console.log(err));
+// const mongoose = require('mongoose');
+// mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+//     .then(() => {
+//         console.log('MongoDB Connected');
+//         console.log(typeof process.env.MONGO_URI);
+//     })
+//     .catch(err => console.log(err));
 
-const Schema = mongoose.Schema;
-const responseSchema = new Schema({
-    prompt: { type: String },
-    status: { type: String },
-    created: { type: Number },
-    message: { type: String },
-    total_tokens: { type: Number }
-});
-const Response = mongoose.model("Response", responseSchema);
+// const Schema = mongoose.Schema;
+// const responseSchema = new Schema({
+//     prompt: { type: String },
+//     status: { type: String },
+//     created: { type: Number },
+//     message: { type: String },
+//     total_tokens: { type: Number }
+// });
+// const Response = mongoose.model("Response", responseSchema);
 
 const createAndSaveResponse = (apiResponse) => {
   return apiResponse.save()
